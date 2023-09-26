@@ -17,7 +17,7 @@ const Donation = () => {
         }
     }, [])
 
-    console.log(isShow)
+    
 
     return (
         <div className='mx-24'>
