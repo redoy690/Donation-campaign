@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState } from "react";
 import { useEffect } from "react";
 import { Chart } from "react-google-charts";
@@ -23,7 +23,7 @@ const Statistics = () => {
 
 
   return (
-    <div className=" mx-80 mt-10">
+    <div className="sm:mx-1 md:mx-1 lg:mx-80 mt-10">
       <Chart
         chartType="PieChart"
         data={data}

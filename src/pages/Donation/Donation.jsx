@@ -20,10 +20,11 @@ const Donation = () => {
     
 
     return (
-        <div className='mx-24'>
+        <div className='mx-2 md:mx-2 lg:mx-12 mb-10'>
+            <div>
             {noFound ? <p className='h-[80vh] flex justify-center items-center'>{noFound}</p> :
                 <div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4'>
                         {
                             isShow ? favorites.map(data => <DonationCard key={data.id} data={data}></DonationCard>) :
                                 favorites.slice(0, 4).map(data => <DonationCard key={data.id} data={data}></DonationCard>)
@@ -35,6 +36,7 @@ const Donation = () => {
 
                 </div>
             }
+            </div>
         </div>
     );
 };

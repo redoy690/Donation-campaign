@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CardDetails.css';
@@ -33,10 +33,10 @@ const CardStorage = ({ data }) => {
     return (
         <div>
             <h2 className='w-full'>
-                <img className='w-full' src={Picture_big} alt="" />
+                <img className='w-full ' src={Picture_big} alt="" />
             </h2>
             <div className='pic-btn'>
-                <button onClick={handleAddToDonate} className='text-white px-4 py-2 rounded-sm mt-5 ml-8' style={{ backgroundColor: text_color }}>Donate ${Price}</button>
+                <button onClick={handleAddToDonate} className='text-white px-2 md:px-3 lg:px-6 py-1 md:py-2 lg:py-3  rounded-sm mt-4 md:mt-10 lg:mt-10 ml-8 md:ml-14 lg:ml-14' style={{ backgroundColor: text_color }}>Donate ${Price}</button>
                 <ToastContainer />
             </div>
             <div>
@@ -48,4 +48,9 @@ const CardStorage = ({ data }) => {
     );
 };
 
+
+CardStorage.propTypes = {
+    data: PropTypes.object.isRequired,
+    
+}
 export default CardStorage;
